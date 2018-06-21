@@ -15,9 +15,12 @@ dependencies:
 
     - pip:
         - altair
+        - braket-daq
         - cython
         - easier
+        - gspread
         - holoviews[all]
+        - oauth2client
         - pandashells[full]
         - pdvega
         - pymc3

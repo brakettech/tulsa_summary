@@ -1,6 +1,6 @@
 from daq.pico import CSV
 from dask import compute, delayed
-from harmonic import Harmonic
+from .harmonic import Harmonic
 from scipy import signal
 import dask.multiprocessing
 import numpy as np
