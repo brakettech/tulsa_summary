@@ -1,0 +1,27 @@
+# Run this to create: conda env create --force -f environment.yml
+name: tulsa_summary
+channels:
+    - conda-forge
+dependencies:
+    - python=3.6
+    - astropy
+    - datashader
+    - jupyterlab
+    - numpy
+    - scikit-learn
+    - scipy
+    - statsmodels
+    - sympy
+
+    - pip:
+        - altair
+        - cython
+        - easier
+        - holoviews[all]
+        - pandashells[full]
+        - pdvega
+        - pymc3
+        - flake8
+        - mypy
+
+
