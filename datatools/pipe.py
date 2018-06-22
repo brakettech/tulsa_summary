@@ -164,7 +164,7 @@ class Pipe:
             future_list.append(future)
 
         # evaluate all futures (if n_jobs < 2), this just puts results into the rec_list
-        rec_list = list(compute_func(*future_list, get=dask.multiprocessing.get))
+        rec_list = list(compute_func(*future_list, scheduler='processes'))
 
         # specify proper column ordering for output
         columns = list(key_dict.keys()) + [
