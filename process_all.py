@@ -123,9 +123,6 @@ class Procesor:
     def run(self, n_jobs=2):
         with ezr.Timer('processing'):
             dfp = self._get_processing_frame(self.data_dir, self.max_samples)
-            #############
-            dfp = dfp.head(20)
-            #############
             pipe = Pipe(dfp, channel_mapper=self.channel_mapper, n_jobs=n_jobs)
             dfr = pipe.process()
             dfr.to_csv(self.results_file, index=False)
