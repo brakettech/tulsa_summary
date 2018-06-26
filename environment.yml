@@ -12,6 +12,7 @@ dependencies:
     - scipy
     - statsmodels
     - sympy
+    - matplotlib
 
     - pip:
         - altair
