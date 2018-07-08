@@ -32,10 +32,10 @@ class Procesor:
     @classmethod
     def _get_log_file(cls):
         # Get the CSV of the files that should be analyzed
-        dfa = pd.read_csv('./test_logs/samples_to_analyze.csv')
+        dfa = pd.read_csv(cls.files_to_analyze_log)
 
         # Get CSV file of all files created, and limit to useful columns
-        dfl = pd.read_csv('./test_logs/all_runs.csv')
+        dfl = pd.read_csv(cls.all_files_log)
         columns = [
             'test_no',
             'sample',
