@@ -81,10 +81,8 @@ class Pipe:
         h_i_prim = Harmonic(harmonics=self.harmonics)
         h_i_prim.fit(df.t, df.res_volt)
 
-        # The following line was in all the initial analysis work.  It is a bug.
-        # the res_volt data is already proportional to current and doesn't need
-        # a time derivative.
-        # h_i_prim = h_i_prim.derivative()
+        # Induced voltage proportional to derivative of current
+        h_i_prim = h_i_prim.derivative()
 
         # fit the secondary voltage
         h_v_sec = Harmonic(harmonics=self.harmonics)
